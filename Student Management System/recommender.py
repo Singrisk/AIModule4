@@ -5,13 +5,13 @@ import pandas as pd
 # Load Trained Model and Encoders
 # ===============================
 
-with open(r"Student Management System\course_model.pkl", "rb") as file:
+with open("course_model.pkl", "rb") as file:
     model = pickle.load(file)
 
-with open(r"Student Management System\interest_encoder.pkl", "rb") as file:
+with open("interest_encoder.pkl", "rb") as file:
     interest_encoder = pickle.load(file)
 
-with open(r"Student Management System\course_encoder.pkl", "rb") as file:
+with open("course_encoder.pkl", "rb") as file:
     course_encoder = pickle.load(file)
 
 
