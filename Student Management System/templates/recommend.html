@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Course Recommendation</h1>
+
+<form method="POST">
+
+<input type="number" name="math" placeholder="Math Marks" required>
+
+<input type="number" name="physics" placeholder="Physics Marks" required>
+
+<input type="number" name="chemistry" placeholder="Chemistry Marks" required>
+
+<input type="number" name="biology" placeholder="Biology Marks" required>
+
+<input type="number" name="english" placeholder="English Marks" required>
+
+<select name="interest">
+
+<option>Engineering</option>
+
+<option>Doctor</option>
+
+<option>Programming</option>
+
+<option>Commerce</option>
+
+</select>
+
+<button>Predict</button>
+
+</form>
+
+{% if prediction %}
+
+<hr>
+
+<h2>Recommended Course</h2>
+
+<h3>{{ prediction }}</h3>
+
+<p>Confidence : {{ confidence }}%</p>
+
+{% endif %}
+
+<a href="/">⬅ Home</a>
+
+</div>
+
+</body>
+</html>
